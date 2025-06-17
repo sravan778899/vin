@@ -16,15 +16,38 @@
       <button id="themeToggle">🌙 Dark</button>
     </nav>
   </header>
-  <main>
-    <h2>Explore Artworks</h2>
-    <div class="gallery">
-      <div class="art-card"><img src="https://via.placeholder.com/200x200?text=Abstract+1"><p>Abstract</p></div>
-      <div class="art-card"><img src="https://via.placeholder.com/200x200?text=Nature+1"><p>Nature</p></div>
-      <div class="art-card"><img src="https://via.placeholder.com/200x200?text=Portrait+1"><p>Portrait</p></div>
-      <div class="art-card"><img src="https://via.placeholder.com/200x200?text=Modern+Art"><p>Modern</p></div>
+<main>
+  <h2>Explore Artworks</h2>
+  <div class="gallery">
+    <div class="art-card" data-title="Abstract Vibes" data-description="An explosion of color and form.">
+      <img src="abst.jpg">
+      <p>Abstract</p>
     </div>
-  </main>
+    <div class="art-card" data-title="Nature Bliss" data-description="A peaceful view of the wild.">
+      <img src="nat.jpg">
+      <p>Nature</p>
+    </div>
+    <div class="art-card" data-title="Human Essence" data-description="Capturing the soul in a portrait.">
+      <img src="pot.jpg">
+      <p>Portrait</p>
+    </div>
+    <div class="art-card" data-title="Modern Mood" data-description="Abstract geometry meets color.">
+      <img src="mod.jpg">
+      <p>Modern</p>
+    </div>
+  </div>
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span id="modalClose" class="close">&times;</span>
+    <img id="modalImg" src="" alt="Art Image">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
   <footer>© 2025 Art Factory</footer>
   <script src="script.js"></script>
 </body>

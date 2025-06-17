@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/art-factory.git'  // Replace with your repo
+                git 'https://github.com/sravan778899/vin.git'  // Replace with your repo
             }
         }
 
