@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/sravan778899/vin.git'  // Replace with your repo
+                git 'https://github.com/sravan778899/vin.git'
             }
         }
 
@@ -19,11 +19,8 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    // Stop and remove any existing container
                     sh 'docker rm -f art-factory-container || true'
-
-                    // Run new container
-                    sh 'docker run -d --name art-factory-container -p 8080:80 art-factory'
+                    sh 'docker run -d --name art-factory-container -p 3000:80 art-factory'
                 }
             }
         }
@@ -31,10 +28,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ Art Factory site deployed successfully!'
+            echo '🎉 Site deployed at http://<VM-IP>:3000'
         }
         failure {
-            echo '❌ Deployment failed.'
+            echo '❌ Deployment failed'
         }
     }
 }
