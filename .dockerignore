@@ -1,0 +1,8 @@
+# Ignore unnecessary files/folders
+.git
+.gitignore
+*.md
+node_modules
+Dockerfile
+.dockerignore
+Jenkinsfile
